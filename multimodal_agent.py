@@ -1,3 +1,5 @@
+import argparse
+
 import cv2
 import numpy as np
 import spacy
@@ -114,15 +116,20 @@ def generate_response(text_input: str, image_path: str)-> str:
 
 
 def main()-> None:
-	# Test the integrated functionality
-	sample_text = "What is in this image?"
-	sample_image = "sample_images/dog.jpg"
+	# Set up argument parser CLI
+	parser = argparse.ArgumentParser(description="Simple Multimodal Agent: Process text and image inputs.")
+	parser.add_argument("--text", "-t", type=str, required=True, help="Text prompt (e.g 'What is this image?')")
+	parser.add_argument("--image", "-i", type=str, required=True, help="Path to the image file (e.g 'dog.jpg')")
 
+	# Parse the arguments
+	args = parser.parse_args()
+
+	# Generate and print response
 	try:
-		response = generate_response(sample_text, sample_image)
+		response = generate_response(args.text, args.image)
 		print()
-		print(f"Text Input: {sample_text}")
-		print(f"Image Input: {sample_image}")
+		print(f"Text Input: {args.text}")
+		print(f"Image Input: {args.image}")
 		print(f"Response: {response}")
 	except Exception as e:
 		print(f"Error: {e}.")
