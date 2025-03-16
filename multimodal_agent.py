@@ -1,8 +1,16 @@
+import cv2
+import numpy as np
 import spacy
+from tensorflow.keras.applications.mobilenet import (
+	MobileNet,
+	preprocess_input,
+	decode_predictions,
+)
 
 
 # Load the small English model from spacy
 nlp = spacy.load("en_core_web_sm")
+
 
 def process_text(text_input: str)->dict:
 	"""
@@ -41,6 +49,35 @@ def process_text(text_input: str)->dict:
 		"keywords": keywords,
 	}
 
+
+def process_image(image_path: str)-> str:
+	"""
+	Process an image using MobileNet to classify its content.
+
+	Args:
+		image_path (str): Path to the local image file
+		(e.g "dog.jpg")
+	Returns:
+		str: The top predicted label for the image content.
+	"""
+	# Load and preprocess the image
+	img = cv2.imread(image_path)
+	if img is None:
+		raise ValueError(f"Could not load image at {image_path}")
+
+	# Resize to MobileNet's expected input size (224x224)
+	img = cv2.resize(img, (224, 224))
+	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # BGR to RGB
+	img = np.expand_dims(img, axis=0) # add batch dimension
+	img = preprocess_input(img) # Preprocess for MobileNet
+
+	# Run prediction
+	preds = mobilenet_model.predict(img)
+	decoded_preds = decode_predictions(preds, top=1)[0] # Top prediction
+
+	# Return the label (e.g "dog")
+	label = decoded_preds[0][1]
+	return label
 
 
 def main()-> None:
