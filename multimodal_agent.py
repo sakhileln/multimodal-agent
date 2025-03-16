@@ -11,6 +11,9 @@ from tensorflow.keras.applications.mobilenet import (
 # Load the small English model from spacy
 nlp = spacy.load("en_core_web_sm")
 
+# Load MobileNet model for image processing
+mobilenet_model = MobileNet(weights="imagenet")
+
 
 def process_text(text_input: str)->dict:
 	"""
@@ -86,6 +89,16 @@ def main()-> None:
 	result = process_text(sample_text)
 	print(f"Input: {sample_text}")
 	print(f"Output: {result}")
+
+	# Test image processing
+	sample_image = "sample_images/dog.jpg" # Make sure you have dog.jog in sample_images/
+	try:
+		image_result = process_image(sample_image)
+		print(f"Image Input: {sample_image}")
+		print(f"Image Ouput: {image_result}")
+	except Exception as e:
+		print(f"Error processing image: {e}")
+		
 
 if __name__ == "__main__":
 	main()
