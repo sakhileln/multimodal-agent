@@ -83,21 +83,49 @@ def process_image(image_path: str)-> str:
 	return label
 
 
-def main()-> None:
-	# Test text processing function
-	sample_text = "What is in this image?"
-	result = process_text(sample_text)
-	print(f"Input: {sample_text}")
-	print(f"Output: {result}")
+def generate_response(text_input: str, image_path: str)-> str:
+	"""
+	Generate a coherent respinse by combining text and image processing.
 
-	# Test image processing
-	sample_image = "sample_images/dog.jpg" # Make sure you have dog.jog in sample_images/
+	Args:
+		text_input (str): The user-provided text prompt.
+		image_path (str): Path to the local image file.
+
+	Returns:
+		str: A text response combining text intent and image content.
+	"""
+	# Process text to get intent and keywords
+	text_result = process_text(text_input)
+	intent = text_result["intent"]
+	keywords = text_result["keywords"]
+
+	# Process image to get the label
+	image_label = process_image(image_path)
+
+	# Generate response based on intent
+	if intent == "describe":
+		if "image" in keywords or "this" in text_input.lower():
+			return f"This image shows a {image_label}."
+		return f"This is a {image_label}."
+	elif intent == "classify":
+		return f"The object is classified as a {image_label}."
+	else:
+		return f"I see a {image_label} in the image."
+
+
+def main()-> None:
+	# Test the integrated functionality
+	sample_text = "What is in this image?"
+	sample_image = "sample_images/dog.jpg"
+
 	try:
-		image_result = process_image(sample_image)
+		response = generate_response(sample_text, sample_image)
+		print()
+		print(f"Text Input: {sample_text}")
 		print(f"Image Input: {sample_image}")
-		print(f"Image Ouput: {image_result}")
+		print(f"Response: {response}")
 	except Exception as e:
-		print(f"Error processing image: {e}")
+		print(f"Error: {e}.")
 		
 
 if __name__ == "__main__":
