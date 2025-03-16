@@ -104,7 +104,7 @@ def generate_response(text_input: str, image_path: str)-> str:
 
 	# Generate response based on intent
 	if intent == "describe":
-		if "image" in keywords pr "this" in text_input.lower():
+		if "image" in keywords or "this" in text_input.lower():
 			return f"This image shows a {image_label}."
 		return f"This is a {image_label}."
 	elif intent == "classify":
@@ -114,20 +114,18 @@ def generate_response(text_input: str, image_path: str)-> str:
 
 
 def main()-> None:
-	# Test text processing function
+	# Test the integrated functionality
 	sample_text = "What is in this image?"
-	result = process_text(sample_text)
-	print(f"Input: {sample_text}")
-	print(f"Output: {result}")
+	sample_image = "sample_images/dog.jpg"
 
-	# Test image processing
-	sample_image = "sample_images/dog.jpg" # Make sure you have dog.jog in sample_images/
 	try:
-		image_result = process_image(sample_image)
+		response = generate_response(sample_text, sample_image)
+		print()
+		print(f"Text Input: {sample_text}")
 		print(f"Image Input: {sample_image}")
-		print(f"Image Ouput: {image_result}")
+		print(f"Response: {response}")
 	except Exception as e:
-		print(f"Error processing image: {e}")
+		print(f"Error: {e}.")
 		
 
 if __name__ == "__main__":
