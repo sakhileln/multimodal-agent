@@ -83,6 +83,36 @@ def process_image(image_path: str)-> str:
 	return label
 
 
+def generate_response(text_input: str, image_path: str)-> str:
+	"""
+	Generate a coherent respinse by combining text and image processing.
+
+	Args:
+		text_input (str): The user-provided text prompt.
+		image_path (str): Path to the local image file.
+
+	Returns:
+		str: A text response combining text intent and image content.
+	"""
+	# Process text to get intent and keywords
+	text_result = process_text(text_input)
+	intent = text_result["intent"]
+	keywords = text_result["keywords"]
+
+	# Process image to get the label
+	image_label = process_image(image_path)
+
+	# Generate response based on intent
+	if intent == "describe":
+		if "image" in keywords pr "this" in text_input.lower():
+			return f"This image shows a {image_label}."
+		return f"This is a {image_label}."
+	elif intent == "classify":
+		return f"The object is classified as a {image_label}."
+	else:
+		return f"I see a {image_label} in the image."
+
+
 def main()-> None:
 	# Test text processing function
 	sample_text = "What is in this image?"
