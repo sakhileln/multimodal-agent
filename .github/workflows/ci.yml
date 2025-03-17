@@ -50,7 +50,7 @@ jobs:
           pip install pyinstaller
       - name: Build executable
         run: |
-          pyinstaller --onefile multimodal-agent.py 
+          pyinstaller --onefile multimodal_agent.py 
       - name: Create release
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -60,4 +60,4 @@ jobs:
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_NAME" \
             --generate-notes
-          gh release upload "$RELEASE_TAG" dist/multimodal-agent
+          gh release upload "$RELEASE_TAG" dist/multimodal_agent
