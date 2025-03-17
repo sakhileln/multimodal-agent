@@ -126,12 +126,16 @@ def main()-> None:
 
 	# Generate and print response
 	try:
+		if args.text is None:
+			raise ValueError("Text prompt cannot be None")
 		response = generate_response(args.text, args.image)
+
 		print()
 		print(f"Text Input: {args.text}")
 		print(f"Image Input: {args.image}")
 		print(f"Response: {response}")
 	except Exception as e:
+		print()
 		print(f"Error: {e}.")
 		
 
