@@ -45,7 +45,6 @@ In short, since you are most likely a developer, **provide a ticket that you wou
 - **Use [GitHub-flavored Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).** Especially put code blocks and console outputs in backticks (```). This improves readability.
 
 ## :love_letter: Feature Requests
-
 Feature requests are welcome! While we will consider all requests, we cannot guarantee your request will be accepted. We want to avoid [feature creep](https://en.wikipedia.org/wiki/Feature_creep). Your idea may be great, but also out-of-scope for the project. If accepted, we cannot make any commitments regarding the timeline for implementation and release. However, you are welcome to submit a pull request to help!
 
 - **Do not open a duplicate feature request.** Search for existing feature requests first. If you find your feature (or one very similar) previously requested, comment on that issue.
@@ -55,7 +54,6 @@ Feature requests are welcome! While we will consider all requests, we cannot gua
 - Be precise about the proposed outcome of the feature and how it relates to existing features. Include implementation details if possible.
 
 ## :mag: Triaging Issues
-
 You can triage issues which may include reproducing bug reports or asking for additional information, such as version numbers or reproduction instructions. Any help you can provide to quickly resolve an issue is very much appreciated!
 
 ## :repeat: Submitting Pull Requests
