@@ -1,7 +1,9 @@
 # Simple Multimodal Agent
+
 A beginner-friendly project to build a simple multimodal AI agent that processes text and image inputs and generates basic text outputs. The goal is to learn about AI concepts like natural language processing (NLP) and computer vision while keeping the implementation lightweight and executable on a standard personal computer.
 
 ## Project Overview
+
 This agent accepts:
 - **Text Input**: A prompt or question (e.g., "What is in this image?").
 - **Image Input**: A local image file (e.g., JPG or PNG).
