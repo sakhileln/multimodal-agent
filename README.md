@@ -10,7 +10,6 @@ This agent accepts:
 The project uses Python and open-source libraries to process inputs locally without requiring advanced hardware or external APIs.
 
 ## Features
-
 - Processes text using lightweight NLP tools (e.g., spaCy).
 - Analyzes images using a pre-trained model (e.g., MobileNet).
 - Runs on a CPU-based system with minimal dependencies.
