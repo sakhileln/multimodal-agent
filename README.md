@@ -20,6 +20,7 @@ The project uses Python and open-source libraries to process inputs locally with
 - A standard personal computer (no GPU required)
 
 ## Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/sakhileln/multimodal-agent.git
