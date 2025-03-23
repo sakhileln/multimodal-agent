@@ -15,6 +15,9 @@ The project uses Python and open-source libraries to process inputs locally with
 - Runs on a CPU-based system with minimal dependencies.
 - Simple command-line interface for interaction.
 
+## Limitations
+- **Accuracy**: The agent uses `MobileNet`, a small model, which may not always accurately classify complex or ambiguous images. This is a trade-off for simplicity and CPU compatibility.
+
 ## Prerequisites
 - Python 3.8 or higher
 - A standard personal computer (no GPU required)
@@ -39,8 +42,8 @@ The project uses Python and open-source libraries to process inputs locally with
 
 ## Dependencies
 - `opencv-python`: For image processing.
-- `tensorflow` or `keras`: For pre-trained image models (e.g., MobileNet).
-- `spacy`: For text processing (run python -m spacy download en_core_web_sm after installation).
+- `tensorflow` or `keras`: For pre-trained image models (e.g., `MobileNet`).
+- `spacy`: For text processing (run `python -m spacy download en_core_web_sm` after installation).
 - `numpy`: For general array operations.
 - `pillow`: For image file handling.
 
@@ -65,6 +68,7 @@ The project uses Python and open-source libraries to process inputs locally with
 - `requirements.txt`: List of dependencies.
 - `README.md`: This file.
 - `sample_images/`: Directory for test images (e.g., dog.jpg).
+- 'notes.md`: Summary of key takeways.
 
 ## Development
 This project is organized into sprints with GitHub Issues. See the [Issues tab](https://github.com/sakhileln/multimodal-agent/issues) for tasks and progress.
@@ -86,20 +90,16 @@ This project is licensed under the GPL v3.0 License. See the [LICENSE](LICENSE) 
 ## Acknowledgments
 - [LangChain](https://www.langchain.com/): For providing robust tools to handle language model operations.
 - [Hugging Face](https://huggingface.co/): For providing versatile and high-quality machine learning models.
-- GitHub: For offering a robust platform for collaboration and version control.
+- [GitHub](https://github.com): For offering a robust platform for collaboration and version control.
+- [TensorFlow](https://www.tensorflow.org/): A software library for machine learning and artificial intelligence.
+- [OpenCV](https://opencv.org/): For computer vision library.
+- [spaCy](https://spacy.io/): For natural language processing.
+- [NumPy](https://numpy.org/): A library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+- [pillow](https://pypi.org/project/pillow/): The Python Imaging Library adds image processing capabilities to your Python interpreter.
+- [pip](https://pypi.org/project/pip/): A dependency management tool.
 
 ## Contact
 
 - Sakhile III  
 - [LinkedIn Profile](https://www.linkedin.com/in/sakhile-ndlazi)
 - [GitHub Profile](https://github.com/sakhileln)
-
-
-
-
-
-
-
-
-
-
