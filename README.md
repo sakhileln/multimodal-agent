@@ -85,7 +85,13 @@ This project is licensed under the GPL v3.0 License. See the [LICENSE](LICENSE) 
 ## Acknowledgments
 - [LangChain](https://www.langchain.com/): For providing robust tools to handle language model operations.
 - [Hugging Face](https://huggingface.co/): For providing versatile and high-quality machine learning models.
-- GitHub: For offering a robust platform for collaboration and version control.
+- [GitHub](https://github.com): For offering a robust platform for collaboration and version control.
+- [TensorFlow](https://www.tensorflow.org/): A software library for machine learning and artificial intelligence.
+- [OpenCV](https://opencv.org/): For computer vision library.
+- [spaCy](https://spacy.io/): For natural language processing.
+- [NumPy](https://numpy.org/): A library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+- [pillow](https://pypi.org/project/pillow/): The Python Imaging Library adds image processing capabilities to your Python interpreter.
+- [pip](https://pypi.org/project/pip/): A dependency management tool.
 
 ## Contact
 - Sakhile III  
