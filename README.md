@@ -15,6 +15,9 @@ The project uses Python and open-source libraries to process inputs locally with
 - Runs on a CPU-based system with minimal dependencies.
 - Simple command-line interface for interaction.
 
+## Limitations
+- **Accuracy**: The agent uses `MobileNet`, a small model, which may not always accurately classify complex or ambiguous images. This is a trade-off for simplicity and CPU compatibility.
+
 ## Prerequisites
 - Python 3.8 or higher
 - A standard personal computer (no GPU required)
