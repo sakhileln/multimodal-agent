@@ -38,8 +38,8 @@ The project uses Python and open-source libraries to process inputs locally with
 
 ## Dependencies
 - `opencv-python`: For image processing.
-- `tensorflow` or `keras`: For pre-trained image models (e.g., MobileNet).
-- `spacy`: For text processing (run python -m spacy download en_core_web_sm after installation).
+- `tensorflow` or `keras`: For pre-trained image models (e.g., `MobileNet`).
+- `spacy`: For text processing (run `python -m spacy download en_core_web_sm` after installation).
 - `numpy`: For general array operations.
 - `pillow`: For image file handling.
 
@@ -91,13 +91,3 @@ This project is licensed under the GPL v3.0 License. See the [LICENSE](LICENSE) 
 - Sakhile III  
 - [LinkedIn Profile](https://www.linkedin.com/in/sakhile-ndlazi)
 - [GitHub Profile](https://github.com/sakhileln)
-
-
-
-
-
-
-
-
-
-
