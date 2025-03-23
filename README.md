@@ -64,6 +64,7 @@ The project uses Python and open-source libraries to process inputs locally with
 - `requirements.txt`: List of dependencies.
 - `README.md`: This file.
 - `sample_images/`: Directory for test images (e.g., dog.jpg).
+- 'notes.md`: Summary of key takeways.
 
 ## Development
 This project is organized into sprints with GitHub Issues. See the [Issues tab](https://github.com/sakhileln/multimodal-agent/issues) for tasks and progress.
