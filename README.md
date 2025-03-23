@@ -88,6 +88,7 @@ Contributions are welcome! If you'd like to contribute. See the [CONTRIBUTING](C
 This project is licensed under the GPL v3.0 License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
+
 - [LangChain](https://www.langchain.com/): For providing robust tools to handle language model operations.
 - [Hugging Face](https://huggingface.co/): For providing versatile and high-quality machine learning models.
 - [GitHub](https://github.com): For offering a robust platform for collaboration and version control.
